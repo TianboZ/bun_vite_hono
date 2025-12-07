@@ -14,7 +14,7 @@ type Expense = z.infer<typeof expenseSchema>;
 
 const FAKE_EXPENSES: Expense[] = [
   { id: 1, title: "Groceries", amount: 100.0 },
-  { id: 2, title: "Gas", amount: 50.0 },
+  { id: 2, title: "Gas", amount: 51.0 },
 ];
 
 export const expensesRoute = new Hono()

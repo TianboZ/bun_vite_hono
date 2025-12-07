@@ -10,7 +10,7 @@
   "private": true,
   "scripts": {
     "start": "bun server/index.ts",
-    "dev": "bun run --watch server/index.ts"
+    "dev": "bun run --hot server/index.ts"
   },
   "type": "module",
   "dependencies": {
