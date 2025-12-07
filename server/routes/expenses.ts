@@ -29,7 +29,14 @@ export const expensesRoute = new Hono()
     FAKE_EXPENSES.push(newExpense);
     return c.json(newExpense);
   })
-  .get("/:id", (c) => {
+  .get("/total-spent", (c) => {
+    const total = FAKE_EXPENSES.reduce(
+      (sum, expense) => sum + expense.amount,
+      0
+    );
+    return c.json({ total });
+  })
+  .get("/:id{[0-9]+}", (c) => {
     const id = Number(c.req.param("id"));
     const expense = FAKE_EXPENSES.find((e) => e.id === id);
     if (!expense) {
