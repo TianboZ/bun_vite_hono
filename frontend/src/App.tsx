@@ -1,17 +1,16 @@
-import { useState } from "react";
 import "./App.css";
+import { useTotalSpent } from "./apis/useTotalSpent";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const totalSpentQuery = useTotalSpent();
+
+  if (totalSpentQuery.isLoading) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <>
-      <h1>Vite + React1222222222</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-      </div>
+      <div>Total spent: {totalSpentQuery.data?.total ?? 0}</div>
     </>
   );
 }
