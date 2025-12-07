@@ -1,0 +1,21 @@
+{
+  "name": "bun_vite_hono",
+  "module": "index.ts",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "private": true,
+  "scripts": {
+    "start": "bun index.ts",
+    "dev": "bun run --watch index.ts"
+  },
+  "type": "module",
+  "dependencies": {
+    "@hono/zod-validator": "^0.7.5",
+    "hono": "^4.10.7",
+    "zod": "^4.1.13"
+  }
+}
