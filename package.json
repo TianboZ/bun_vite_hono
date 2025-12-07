@@ -1,6 +1,6 @@
 {
   "name": "bun_vite_hono",
-  "module": "index.ts",
+  "module": "server/index.ts",
   "devDependencies": {
     "@types/bun": "latest"
   },
@@ -9,8 +9,8 @@
   },
   "private": true,
   "scripts": {
-    "start": "bun index.ts",
-    "dev": "bun run --watch index.ts"
+    "start": "bun server/index.ts",
+    "dev": "bun run --watch server/index.ts"
   },
   "type": "module",
   "dependencies": {
